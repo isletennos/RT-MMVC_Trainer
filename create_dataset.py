@@ -34,7 +34,7 @@ def get_f0(wav_path, frame_length=FRAME_LENGTH, win_length=WIN_LENGTH, hop_lengt
     y = np.pad(y, pad_width, 'reflect')
     #Get f0
     #https://librosa.org/doc/main/generated/librosa.pyin.html
-    y = y.astype(np.float)
+    y = y.astype(np.float64)
     f0_harvest, t = pw.harvest(y, sr, frame_period = 5.5, f0_floor=71.0, f0_ceil=1000.0)
     #specのshapeに合わせる
     f0_size = math.floor((y.shape[0] - win_length) / hop_length) - 1
