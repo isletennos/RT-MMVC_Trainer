@@ -1,6 +1,7 @@
 Cython==0.29.21
 librosa==0.8.0
 matplotlib==3.3.1
+numba==0.48.0
 numpy==1.23.5
 phonemizer==2.2.1
 scipy
